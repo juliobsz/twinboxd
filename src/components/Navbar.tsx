@@ -5,7 +5,7 @@ const Navbar = () => {
                 <a href="/" className="flex items-center gap-2 group items-center justify-center">
                     <img src="/letterboxd-match-no-bg.png" alt="logo" className="h-18 w-18"/>
                     <span className="text-2xl font-bold tracking-tight text-foreground">
-                        Letterboxd Match
+                        Twinboxd
                     </span>
                 </a>
                 <a

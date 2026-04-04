@@ -1,22 +1,23 @@
 <div align="center">
     <img src="./public/letterboxd-match-no-bg.png" alt="logo" style="height: 100px;"/>
-    <h1 style="font-size: 28px;">Letterboxd Match</h1>
+    <h1 style="font-size: 28px;">Twinboxd</h1>
     <p>Compare Letterboxd watchlists to find the perfect movie to watch.</p>
 </div>
-<p align="center">Built with Next.js, React, TypeScript and <a href="https://github.com/juliobsz/letterboxd-whitelist-api">Letterboxd Watchlist Api</a>.</p>
+<p align="center">Built with Next.js, React, TypeScript and <a href="https://github.com/juliobsz/letterboxd-watchlist-api">Letterboxd Watchlist Api</a>.</p>
 
 ## Requirements
 
 - Node.js 18+
 - API Running
 
-Check the [Letterboxd Watchlist Api](https://github.com/juliobsz/letterboxd-whitelist-api) repository for more info.
+Check the [Letterboxd Watchlist Api](https://github.com/juliobsz/letterboxd-watchlist-api) repository for more info.
 
 ## Environment Variables
 
 Rename `.env.example` to `.env`
 ```env
 NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
+NEXT_METADATA_BASE=your_production_url
 ```
 
 ## Host it yourself
@@ -31,6 +32,7 @@ npm run dev
 - [ ] Shuffle option
 - [ ] Multi-language support
 - [ ] Open-source section
+- [ ] Light mode (not a priority)
 - [X] Not found page
 
 ## License
