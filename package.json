@@ -1,6 +1,11 @@
 {
   "name": "letterboxd-match",
   "version": "1.0.0",
+  "description": "Find matching movies between two Letterboxd watchlists.",
+  "keywords": ["letterboxd", "movie", "watchlist"],
+  "author": "Julio Barbosa <juliobrsouza@outlook.com>",
+  "repository": "https://github.com/juliobsz/letterboxd-match",
+  "license": "GPL-3.0-only",
   "scripts": {
     "dev": "next dev -p 5173",
     "build": "next build",
