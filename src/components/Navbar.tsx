@@ -9,7 +9,7 @@ const Navbar = () => {
                     </span>
                 </a>
                 <a
-                    href="https://github.com/juliobsz/letterboxd-match"
+                    href="https://github.com/juliobsz/twinboxd"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-md text-muted-foreground hover:text-foreground transition-colors"

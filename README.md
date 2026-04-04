@@ -5,6 +5,9 @@
 </div>
 <p align="center">Built with Next.js, React, TypeScript and <a href="https://github.com/juliobsz/letterboxd-watchlist-api">Letterboxd Watchlist Api</a>.</p>
 
+## Now live
+Check it out at [twinboxd.me](https://twinboxd.me/)!
+
 ## Requirements
 
 - Node.js 18+
