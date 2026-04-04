@@ -36,7 +36,7 @@ export function LoadingModal({open}: LoadingModalProps) {
 
                 return prev.filter((_: string, idx: number) => idx !== randomIndex);
             });
-        }, 2000);
+        }, 3000);
 
         return () => clearInterval(interval);
     }, [open]);
