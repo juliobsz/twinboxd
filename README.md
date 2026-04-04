@@ -1,5 +1,6 @@
 <div align="center">
-    <h1 style="font-size: 28px; margin: 10px 0;">Letterboxd Match</h1>
+    <img src="./public/letterboxd-match-no-bg.png" alt="logo" style="height: 100px;"/>
+    <h1 style="font-size: 28px;">Letterboxd Match</h1>
     <p>Compare Letterboxd watchlists to find the perfect movie to watch.</p>
 </div>
 <p align="center">Built with Next.js, React, TypeScript and <a href="https://github.com/juliobsz/letterboxd-whitelist-api">Letterboxd Watchlist Api</a>.</p>
@@ -25,6 +26,12 @@ npm install
 
 npm run dev
 ```
+
+## To do
+- [ ] Shuffle option
+- [ ] Multi-language support
+- [ ] Open-source section
+- [X] Not found page
 
 ## License
 
