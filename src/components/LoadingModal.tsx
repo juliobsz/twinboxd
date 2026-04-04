@@ -3,11 +3,10 @@
 import { useState, useEffect } from 'react';
 
 interface LoadingModalProps {
-    open: boolean,
-    onSubmit?: (leftUsername: string, rightUsername: string) => Promise<void>
+    open: boolean
 }
 
-export function LoadingModal({open, onSubmit}: LoadingModalProps) {
+export function LoadingModal({open}: LoadingModalProps) {
     const loadingTexts = [
         "Lighting the projector...",
         "Reading the scripts...",
@@ -19,7 +18,7 @@ export function LoadingModal({open, onSubmit}: LoadingModalProps) {
         "Finalizing the final cut..."
     ];
     const [currentText, setCurrentText] = useState(loadingTexts[0]);
-    const [remainingTexts, setRemainingTexts] = useState(loadingTexts.slice(1));
+    const [, setRemainingTexts] = useState(loadingTexts.slice(1));
 
     useEffect(() => {
         if (!open) return;
