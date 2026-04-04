@@ -1,0 +1,155 @@
+@import "tailwindcss";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --font-sans: var(--font-sans);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  color-scheme: dark;
+  --background: hsl(220 14% 6%);
+  --foreground: hsl(210 20% 92%);
+
+  --card: hsl(220 12% 10%);
+  --card-foreground: hsl(210 20% 92%);
+
+  --popover: hsl(220 12% 10%);
+  --popover-foreground: hsl(210 20% 92%);
+
+  --primary: hsl(153 45% 42%);
+  --primary-foreground: hsl(220 14% 6%);
+
+  --secondary: hsl(220 10% 14%);
+  --secondary-foreground: hsl(210 15% 75%);
+
+  --muted: hsl(220 10% 16%);
+  --muted-foreground: hsl(215 12% 52%);
+
+  --destructive: hsl(0 62% 50%);
+  --destructive-foreground: hsl(210 20% 92%);
+
+  --border: hsl(220 10% 18%);
+  --input: hsl(220 10% 14%);
+  --ring: hsl(153 45% 42%);
+
+  --radius: 0.5rem;
+
+  --sidebar-background: hsl(220 14% 8%);
+  --sidebar-foreground: hsl(210 15% 75%);
+  --sidebar-primary: hsl(153 45% 42%);
+  --sidebar-primary-foreground: hsl(220 14% 6%);
+  --sidebar-accent: hsl(220 10% 14%);
+  --sidebar-accent-foreground: hsl(210 15% 75%);
+  --sidebar-border: hsl(220 10% 18%);
+  --sidebar-ring: hsl(153 45% 42%);
+
+  --surface: hsl(220 12% 9%);
+  --surface-foreground: hsl(210 15% 75%);
+  --glow-primary: 153 45% 42%;
+}
+
+a {
+  @apply text-emerald-300 hover:text-emerald-200;
+}
+
+.dark {
+  --background: hsl(220 14% 6%);
+  --foreground: hsl(210 20% 92%);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 420ms ease-out forwards;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grain {
+    position: relative;
+  }
+
+  .grain::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+}

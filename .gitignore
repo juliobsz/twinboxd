@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+dist/
+
+# Local environment files (secrets)
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+
+# OS / IDE files
+.DS_Store
+.idea/
+.vscode/
+
+# Deployment / caches
+.vercel/
+
+# TypeScript incremental build info
+*.tsbuildinfo
