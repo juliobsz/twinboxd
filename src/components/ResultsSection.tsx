@@ -70,6 +70,7 @@ const ResultsSection = ({ state, movies, user1, user2, errorMessage }: ResultsSe
                                         title={movie.title}
                                         year={movie.year}
                                         posterUrl={movie.posterUrl}
+                                        letterboxdUrl={movie.letterboxdUrl}
                                     />
                                 </div>
                             ))}
