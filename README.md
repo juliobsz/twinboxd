@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./public/letterboxd-match-no-bg.png" alt="logo" style="height: 100px;"/>
+    <img src="public/twinboxd-no-bg.png" alt="logo" style="height: 100px;"/>
     <h1 style="font-size: 28px;">Twinboxd</h1>
     <p>Compare Letterboxd watchlists to find the perfect movie to watch.</p>
 </div>
