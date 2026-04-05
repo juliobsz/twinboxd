@@ -9,6 +9,7 @@ import { MatchedMovie, mergeMatchesByName } from '@/lib/match';
 import Footer from '@/components/Footer';
 import DemoSection from '@/components/DemoSection';
 import ResultsSection, { Movie } from '@/components/ResultsSection';
+import OpenSource from '@/components/OpenSource';
 
 type ResultsState = 'idle' | 'loading' | 'success' | 'error';
 
@@ -51,11 +52,9 @@ export default function HomePage() {
       setMovies(mappedMovies);
       setState('success');
     } catch (error) {
-      if (error instanceof ApiClientError) {
-        setErrorMessage(error.message);
-      } else {
-        setErrorMessage('Unexpected error while loading watchlists.');
-      }
+      if (error instanceof ApiClientError) setErrorMessage(error.message);
+      else setErrorMessage('Unexpected error while loading watchlists.');
+
       setState('error');
     }
 
@@ -77,6 +76,7 @@ export default function HomePage() {
           errorMessage={errorMessage ?? undefined}
       />
       {state === 'idle' && <DemoSection />}
+      <OpenSource/>
       <Footer/>
     </main>
   );

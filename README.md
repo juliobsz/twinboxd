@@ -32,9 +32,10 @@ npm run dev
 ```
 
 ## To do
-- [ ] Shuffle option
+- [ ] Shuffle feature
+- [ ] Rate sorting
 - [ ] Multi-language support
-- [ ] Open-source section
+- [X] Open-source section
 - [ ] Light mode (not a priority)
 - [X] Not found page
 
